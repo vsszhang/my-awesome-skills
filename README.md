@@ -44,6 +44,28 @@ gh skill install YOUR_GITHUB_NAME/my-awesome-skills \
   --all
 ```
 
+### Update skills
+
+Check for updates without changing installed files:
+
+```bash
+gh skill update conventional-commit-git --dry-run
+```
+
+Update the installed skill interactively:
+
+```bash
+gh skill update conventional-commit-git
+```
+
+Update all installed skills without prompting:
+
+```bash
+gh skill update --all
+```
+
+Use `gh skill update --force --all` only when you intend to overwrite local changes to installed skill files.
+
 ## Local development
 
 Install from a local checkout into the current project:
