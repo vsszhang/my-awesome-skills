@@ -6,9 +6,14 @@ Small, reusable workflows for coding agents. 🧩
 
 ## Skills
 
-| Skill | What it does | Invoke with |
-| --- | --- | --- |
-| [`conventional-commit-git`](skills/conventional-commit-git/) | Groups uncommitted changes and creates Conventional Commits | `$conventional-commit-git` |
+| Skill | What it does | Invoke with | Docs |
+| --- | --- | --- | --- |
+| [`conventional-commit-git`](skills/conventional-commit-git/) | Groups uncommitted changes and creates Conventional Commits | `$conventional-commit-git` | [Overview](docs/skills/conventional-commit-git/) · [Examples](docs/skills/conventional-commit-git/examples.md) |
+| [`code-quality-auditor`](skills/code-quality-auditor/) | Runs an evidence-first, read-only security, code-quality, and performance assessment | `$code-quality-auditor` | [Overview](docs/skills/code-quality-auditor/) · [Examples](docs/skills/code-quality-auditor/examples.md) |
+
+## Documentation
+
+Read [the documentation index](docs/) for human-facing skill overviews, scope boundaries, and usage examples. Runtime instructions remain in each skill's `SKILL.md`.
 
 ## Install
 
@@ -26,6 +31,14 @@ Project scope is a good default for testing. Use user scope when you want the sk
 ### With `gh`
 
 The recommended installer is [`gh skill install`](https://cli.github.com/manual/gh_skill_install).
+
+Install `code-quality-auditor` for your user account:
+
+```bash
+gh skill install YOUR_GITHUB_NAME/my-awesome-skills code-quality-auditor \
+  --agent codex \
+  --scope user
+```
 
 Install one skill for your user account:
 
@@ -98,6 +111,14 @@ sh tests/run-forward-test.sh
 ### Without `gh`
 
 You can install a skill with standard shell commands. Clone this repository first, then copy the skill to the scope you want.
+
+Install `code-quality-auditor` for the current project:
+
+```bash
+mkdir -p .agents/skills/code-quality-auditor
+cp -R skills/code-quality-auditor/. \
+  .agents/skills/code-quality-auditor/
+```
 
 Install for the current project:
 
