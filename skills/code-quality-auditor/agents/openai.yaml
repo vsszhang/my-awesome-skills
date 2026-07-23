@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Quality Auditor"
+  short_description: "Run isolated security, quality, and performance audits"
+  default_prompt: "Use $code-quality-auditor to audit this codebase and synthesize security, quality, and performance findings."
