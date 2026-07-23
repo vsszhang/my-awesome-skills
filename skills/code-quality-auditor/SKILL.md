@@ -1,6 +1,6 @@
 ---
 name: code-quality-auditor
-description: Orchestrate an evidence-first, read-only code assessment through three isolated specialist subagents: security-auditor for OWASP-oriented security risks, quality-checker for code smells and maintainability, and perf-analyzer for performance anti-patterns. Use when the user asks to assess, review, audit, or score code quality, especially for a web application or service, and needs a synthesized product and technical-lead conclusion. The main agent must inherit the model selected in the current user session and must not select a different model.
+description: "Orchestrate an evidence-first, read-only code assessment through three isolated specialist subagents: security-auditor for OWASP-oriented security risks, quality-checker for code smells and maintainability, and perf-analyzer for performance anti-patterns. Use when the user asks to assess, review, audit, or score code quality, especially for a web application or service, and needs a synthesized product and technical-lead conclusion. The main agent must inherit the model selected in the current user session and must not select a different model."
 ---
 
 # Code Quality Auditor

@@ -1,6 +1,6 @@
 ---
 name: conventional-commit-git
-description: Review uncommitted changes on the current Git branch, group them by coherent feature or fix, and create one or more local commits using Conventional Commit messages. Invoke only when the human explicitly calls `$conventional-commit-git`; never invoke this skill from inferred intent, and never push or open a pull request.
+description: "Review uncommitted changes on the current Git branch, group them by coherent feature or fix, and create one or more local commits using Conventional Commit messages. Invoke only when the human explicitly calls `$conventional-commit-git`; never invoke this skill from inferred intent, and never push or open a pull request."
 ---
 
 # Conventional Commit Git

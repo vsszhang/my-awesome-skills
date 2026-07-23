@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Validate the repository's SKILL.md files without external dependencies."""
 
+import json
 from pathlib import Path
 import re
 import sys
@@ -9,6 +10,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS_DIR = ROOT / "skills"
 NAME_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+FRONTMATTER_KEYS = {"name", "description"}
 
 
 def parse_frontmatter(path: Path) -> dict[str, str]:
@@ -26,7 +28,25 @@ def parse_frontmatter(path: Path) -> dict[str, str]:
         key, separator, value = line.partition(":")
         if not separator or not key.strip() or not value.strip():
             raise ValueError(f"invalid frontmatter line: {line!r}")
-        values[key.strip()] = value.strip().strip('"').strip("'")
+        key = key.strip()
+        if key not in FRONTMATTER_KEYS:
+            raise ValueError(f"unsupported frontmatter key: {key!r}")
+        if key in values:
+            raise ValueError(f"duplicate frontmatter key: {key!r}")
+
+        scalar = value.strip()
+        if key == "description":
+            if not scalar.startswith('"'):
+                raise ValueError("description must be a double-quoted YAML string")
+            try:
+                parsed = json.loads(scalar)
+            except json.JSONDecodeError as exc:
+                raise ValueError(f"invalid quoted description: {exc.msg}") from exc
+            if not isinstance(parsed, str):
+                raise ValueError("description must be a string")
+            values[key] = parsed
+        else:
+            values[key] = scalar
     return values
 
 
@@ -66,4 +86,3 @@ def validate() -> int:
 
 if __name__ == "__main__":
     sys.exit(validate())
-
