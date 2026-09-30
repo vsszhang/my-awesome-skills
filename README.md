@@ -8,6 +8,7 @@ Small, reusable workflows for coding agents. 🧩
 
 | Skill | What it does | Invoke with | Docs |
 | --- | --- | --- | --- |
+| [`class-knowledge-notes`](skills/class-knowledge-notes/) | Organizes class materials into source-linked Chinese notes with visuals and review questions | `$class-knowledge-notes` | [Overview](docs/skills/class-knowledge-notes/) · [Examples](docs/skills/class-knowledge-notes/examples.md) |
 | [`conventional-commit-git`](skills/conventional-commit-git/) | Groups uncommitted changes and creates Conventional Commits | `$conventional-commit-git` | [Overview](docs/skills/conventional-commit-git/) · [Examples](docs/skills/conventional-commit-git/examples.md) |
 | [`code-quality-auditor`](skills/code-quality-auditor/) | Runs an evidence-first, read-only security, code-quality, and performance assessment | `$code-quality-auditor` | [Overview](docs/skills/code-quality-auditor/) · [Examples](docs/skills/code-quality-auditor/examples.md) |
 

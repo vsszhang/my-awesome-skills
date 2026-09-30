@@ -4,6 +4,7 @@ Human-facing documentation for the Skills in this repository. Use these pages to
 
 | Skill | Overview | Examples |
 | --- | --- | --- |
+| `class-knowledge-notes` | [Overview](skills/class-knowledge-notes/) | [Examples](skills/class-knowledge-notes/examples.md) |
 | `code-quality-auditor` | [Overview](skills/code-quality-auditor/) | [Examples](skills/code-quality-auditor/examples.md) |
 | `conventional-commit-git` | [Overview](skills/conventional-commit-git/) | [Examples](skills/conventional-commit-git/examples.md) |
 
