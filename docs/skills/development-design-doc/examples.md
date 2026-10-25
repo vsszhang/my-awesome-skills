@@ -8,6 +8,14 @@ Use $development-design-doc to turn the design decisions in this discussion into
 
 The Skill inspects the available discussion and project guidance, cites available source pointers, and marks any unresolved behavior that blocks implementation instead of inventing a decision.
 
+## Start from a topic and use default output location
+
+```text
+用 $development-design-doc 为“统一数据导入流程”设计一份供团队和开发 agent 使用的文档。没有指定输出目录，请按默认规则保存。
+```
+
+The Skill writes a Markdown document in the active project's root directory and uses the language of the invoking message.
+
 ## Document a feature in an existing repository
 
 ```text
