@@ -4,6 +4,10 @@
 
 Notes are written in Chinese, organized by topic, and retain important original-language terms. Key knowledge points link to relevant screenshots when visuals help explain the material. The note also records teacher arrangements, assignments, class exercises, review questions with answers, and a source list.
 
+For classroom photos, the skill automatically locates the blackboard, whiteboard, projection screen, or monitor display, corrects angled views to a frontal perspective, and crops away unrelated surroundings before inserting the image into Markdown or Word. It preserves relevant writing and diagrams, checks the saved result for complete content and readable proportions, and keeps the source photo unchanged. Multiple teaching surfaces can be corrected separately; unclear boundaries or corners are handled conservatively and reported.
+
+HEIC/HEIF photos are decoded with available tools, and camera orientation is applied before selecting the region. People or objects already obscuring the teaching surface remain visible in the processed image; missing content is reported rather than reconstructed.
+
 ## Archive layout
 
 The skill uses the explicit output folder as the archive root when one is provided. Otherwise it identifies the course folder from the supplied paths. Notes are saved in that root, and selected visuals are saved under `artificial/<note-file-stem>/` with relative links from the Markdown file.
