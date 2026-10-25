@@ -7,5 +7,6 @@ Human-facing documentation for the Skills in this repository. Use these pages to
 | `class-knowledge-notes` | [Overview](skills/class-knowledge-notes/) | [Examples](skills/class-knowledge-notes/examples.md) |
 | `code-quality-auditor` | [Overview](skills/code-quality-auditor/) | [Examples](skills/code-quality-auditor/examples.md) |
 | `conventional-commit-git` | [Overview](skills/conventional-commit-git/) | [Examples](skills/conventional-commit-git/examples.md) |
+| `development-design-doc` | [Overview](skills/development-design-doc/) | [Examples](skills/development-design-doc/examples.md) |
 
 For installation, use the repository [README](../README.md#install). For contribution requirements, use [CONTRIBUTING.md](../CONTRIBUTING.md).
